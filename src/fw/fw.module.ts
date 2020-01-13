@@ -4,13 +4,15 @@ import { FrameworkBodyComponent } from "./framework-body/framework-body.componen
 import { ContentComponent } from "./content/content.component";
 import { TitleBarComponent } from "./title-bar/title-bar.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
+import { StatusBarComponent } from "./status-bar/status-bar.component";
 
 @NgModule({
   declarations: [
     FrameworkBodyComponent,
     ContentComponent,
     TitleBarComponent,
-    TopBarComponent
+    TopBarComponent,
+    StatusBarComponent
   ],
   imports: [CommonModule],
   exports: [FrameworkBodyComponent]
