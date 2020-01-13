@@ -1,11 +1,11 @@
 <div *screenBelowLarge class="title-bar-small">
-  <span class="glyphicon glyphicon-menu-hamburger"></span>
-  <span class="fa fa-bars"></span>
+  <!-- <span class="glyphicon glyphicon-menu-hamburger"></span> -->
+  <span class="fa fa-bars" (click)="menuService.toggleLeftSideMenu()"></span>
   <div class="small-image-holder">
     <img class="small-image" src="assets/logo.png" />
     Coffee Works
   </div>
-  <span class="glyphicon glyphicon-option-vertical"></span>
+  <!-- <span class="glyphicon glyphicon-option-vertical"></span> -->
   <span class="fa fa-ellipsis-v"></span>
 </div>
 
@@ -14,5 +14,6 @@
   <h2>Coffee Works</h2>
   <div class="menu-area">
     <fw-top-bar></fw-top-bar>
+    <fw-menu *ngIf="!menuService.isVertical"></fw-menu>
   </div>
 </div>

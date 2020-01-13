@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { MenuService } from "src/fw/services/menu.service";
+import { initialMenuItems } from "./app.menu";
 
 @Component({
   selector: "app-root",
@@ -6,5 +8,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private menuService: MenuService) {
+    menuService.items = initialMenuItems;
+  }
 }
