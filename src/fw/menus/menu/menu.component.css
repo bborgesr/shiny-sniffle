@@ -27,7 +27,14 @@ li {
 button {
   margin-top: 20px;
 }
+
 button.horizontal {
   margin-left: 20px;
   margin-bottom: 2px;
+}
+
+span.fa {
+  background-color: green;
+  padding: 10px;
+  border-radius: 20%;
 }

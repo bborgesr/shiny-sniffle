@@ -4,8 +4,27 @@
       <fw-menu-item
         [item]="item"
         [ngClass]="{ 'vertical-menu': menuService.isVertical }"
+        [parentIsPopup]="false"
       >
       </fw-menu-item>
     </li>
   </ul>
 </nav>
+
+<button
+  *ngIf="!menuService.showingLeftSideMenu"
+  class="btn btn-lg"
+  [ngClass]="{ horizontal: !menuService.isVertical }"
+  (click)="menuService.toggleMenuOrientation()"
+>
+  <span
+    *ngIf="menuService.isVertical"
+    class="glyphicon glyphicon-menu-up fa fa-chevron-up"
+  ></span>
+  <span
+    *ngIf="!menuService.isVertical"
+    class="glyphicon glyphicon-menu-left fa fa-chevron-left"
+  ></span>
+</button>
+
+<!-- <button class="btn btn-primary">Hello</button> -->
