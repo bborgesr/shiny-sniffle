@@ -6,30 +6,28 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { FwModule } from "src/fw/fw.module";
 import { DashboardComponent } from "./dashboard/dashboard.component";
-import { CountriesComponent } from "./countries/countries.component";
 import { SettingsComponent } from "./settings/settings.component";
 import { appRoutes } from "./app-routing.module";
-import { CountryDetailComponent } from './country-detail/country-detail.component';
-import { CountryListComponent } from './country-list/country-list.component';
-import { CountryMaintComponent } from './country-maint/country-maint.component';
+import { CountryDetailComponent } from "./country-detail/country-detail.component";
+import { CountryListComponent } from "./country-list/country-list.component";
+import { CountryMaintComponent } from "./country-maint/country-maint.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    CountriesComponent,
     SettingsComponent,
     CountryDetailComponent,
     CountryListComponent,
-    CountryMaintComponent
+    CountryMaintComponent,
   ],
   imports: [
     BrowserModule,
     // AppRoutingModule,
     FwModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
